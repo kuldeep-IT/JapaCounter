@@ -72,6 +72,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                 //uncomment
                 if (binding.tvcurrentJapaCount.text.toString().toInt() % 108 == 0) {
+
+                    count = 0
+
                     todayCount += 1
                     binding.tvTodayJapaCount.text = todayCount.toString()
                     myEdit.putString(TODAY_JAPA, todayCount.toString())
