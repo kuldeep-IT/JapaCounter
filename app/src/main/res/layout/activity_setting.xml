@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E1EDFF"
+        tools:context=".SettingActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:focusable="true"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                app:rippleColor="@color/black"
+                app:strokeWidth="1dp"
+                android:clickable="false"
+                android:id="@+id/reset"
+              >
+
+                <TextView
+                    android:id="@+id/tvReset"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Reset"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="#4C4C4C"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Donate for support us"
+                android:layout_marginLeft="16dp"
+                android:textColor="#2b2b2b"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat_bold"
+                />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

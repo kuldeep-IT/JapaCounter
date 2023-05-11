@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E1EDFF"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/ivSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/control"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivSetting">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="true"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp"
+                app:rippleColor="@color/black"
+                app:strokeWidth="1dp"
+                tools:ignore="DuplicateIds">
+
+                <LinearLayout
+                    android:id="@+id/totalJapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Total Japa"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalJapaCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="1608"
+                        android:textAlignment="center"
+                        android:textColor="#2B2B2B"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="true"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp"
+                app:rippleColor="@color/black"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:id="@+id/todayJapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Today's Japa"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvTodayJapaCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="#2B2B2B"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="true"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:rippleColor="@color/black"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:id="@+id/currentJapa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Current Japa"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvcurrentJapaCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="#2B2B2B"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivFeet"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="14dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingHorizontal="18dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/lotus_feet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+            app:shapeAppearance="@style/CornerCut" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivHareKrishnaText"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingHorizontal="18dp"
+
+            android:scaleType="fitXY"
+            android:src="@drawable/maha_mantra"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFeet"
+            app:shapeAppearance="@style/CornerCut" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
