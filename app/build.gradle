@@ -19,6 +19,12 @@ android {
 
     buildTypes {
         release {
+
+            /*storeFile file("/home/kuldeep/AndroidStudioProjects/krishna/app/japa_counter.jks")
+           storePassword 'dadaMahadev'
+           keyAlias 'japa_counter'
+           keyPassword 'dadaMahadev'*/
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -35,6 +41,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -48,5 +55,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
     implementation 'com.robinhood.ticker:ticker:2.0.4'
+
+    implementation 'com.google.android.material:material:1.0.0'
+
 
 }

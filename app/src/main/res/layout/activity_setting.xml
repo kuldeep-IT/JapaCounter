@@ -10,7 +10,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E1EDFF"
+        android:background="#CCCCFF"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
         tools:context=".SettingActivity">
 
         <LinearLayout
@@ -18,42 +20,145 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:focusable="true"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                app:cardUseCompatPadding="true"
-                app:rippleColor="@color/black"
-                app:strokeWidth="1dp"
-                android:clickable="false"
+            <Button
                 android:id="@+id/reset"
-              >
-
-                <TextView
-                    android:id="@+id/tvReset"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Reset"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="12dp"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textColor="#4C4C4C"
-                    />
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Donate for support us"
-                android:layout_marginLeft="16dp"
-                android:textColor="#2b2b2b"
-                android:textSize="20sp"
-                android:fontFamily="@font/montserrat_bold"
-                />
+                android:layout_gravity="center"
+                android:backgroundTint="@color/black"
+                android:text="Reset Japa count"
+                android:textColor="@color/white" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Donate"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text=" for support us"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Donate 10 Rs."
+                        app:backgroundTint="#8ADFD8" />
+
+                    <Button
+                        android:id="@+id/btn20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#DA9898"
+                        android:text="Donate 20 Rs." />
+
+                    <Button
+                        android:id="@+id/btn30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#eedd82"
+                        android:text="Donate 30 Rs." />
+
+                    <Button
+                        android:id="@+id/btn40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#82cda8"
+                        android:text="Donate 40 Rs." />
+
+                    <Button
+                        android:id="@+id/btn50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#82a8cd"
+                        android:text="Donate 50 Rs." />
+
+                    <Button
+                        android:id="@+id/btn60"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#82cdcd"
+                        android:text="Donate 60 Rs." />
+
+                    <Button
+                        android:id="@+id/btn70"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FFC1C1"
+                        android:text="Donate 70 Rs." />
+
+                    <Button
+                        android:id="@+id/btn80"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#66cdaa"
+                        android:text="Donate 80 Rs." />
+
+                    <Button
+                        android:id="@+id/btn90"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#b4eeb4"
+                        android:text="Donate 90 Rs." />
+
+                    <Button
+                        android:id="@+id/btn100"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E1A5F4"
+                        android:text="Donate 100 Rs." />
+
+                    <Button
+                        android:id="@+id/btn1000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#e2ed76"
+                        android:text="Donate 1000 Rs." />
+
+                    <TextView
+                        android:id="@+id/view1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:textSize="8dp"
+                        android:text="All donations collected from the app are used to support the development. No donations are used for any other purpose."
+                        />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
 
         </LinearLayout>
 
