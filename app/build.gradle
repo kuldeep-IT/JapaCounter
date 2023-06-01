@@ -4,15 +4,16 @@ plugins {
 }
 
 android {
-    namespace 'com.krishna.japacounter'
+    namespace 'com.radhakrishna.japa'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.krishna.japacounter"
+//        applicationId "com.krishna.japacounter"
+        applicationId "com.radhakrishna.japa"
         minSdk 21
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,7 +31,7 @@ android {
         }
     }
 
-    buildFeatures{
+    buildFeatures {
         dataBinding true
     }
 
@@ -58,5 +59,10 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.0.0'
 
+    def billingVersion = "6.0.0"
+
+    implementation "com.android.billingclient:billing:$billingVersion"
+
+    implementation 'com.google.guava:guava:27.0.1-android'
 
 }

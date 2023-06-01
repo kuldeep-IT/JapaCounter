@@ -1,4 +1,4 @@
-package com.krishna.japacounter
+package com.radhakrishna.japa
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,7 +10,8 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.krishna.japacounter.databinding.ActivityMainBinding
+import com.android.billingclient.api.BillingClient
+import com.radhakrishna.japa.databinding.ActivityMainBinding
 import java.util.*
 
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private var cal = Calendar.getInstance()
     private var currentDate = cal.get(Calendar.DAY_OF_YEAR)
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
